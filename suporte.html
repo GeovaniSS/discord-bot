@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Geovani">
+    <meta name="keywords" content="Discord, Discord Bot, Bot do Discord, Disco, Música Discord, Discord Music, Disco Bot"> 
+    <meta name="description" content="Um bot brasileiro para o Discord com música de alta qualidade, comandos simples e intuivos.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="img/Banner_DiscordBot2.png" alt="Banner do Site">
+    </header>
+
+    <nav class="menu">
+        <a href="index.html">HOME</a>
+        <a href="index.html#pag-funcoes">FUNÇÕES</a>
+        <a href="index.html#pag-beneficios">BENEFÍCIOS</a>
+        <a href="index.html#pag-download">DOWNLOAD</a>
+        <a href="#">SUPORTE</a>
+    </nav>
+
+    <main>
+        <h1>Suporte</h1>
+        <form action="">
+            <label for="nome">
+                <span>Nome:</span>
+                <input id="nome" type="text" name="nome" placeholder="Nome Completo" autofocus required>
+            </label>
+
+            <label for="email">
+                <span>Email:</span>            
+                <input id="email" type="email" name="email" placeholder="nome@gmail.com" required>
+            </label>
+
+
+            <label for="senha">
+                <span>Senha:</span>
+                <input id="senha" type="password" name="senha" placeholder="somente números" required>
+            </label>
+
+            <label for="cel">
+                <span>Celular:</span>
+                <input id="cel" type="tel" name="cel" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$">
+            </label>
+
+            <label for="data">
+                <span>Data:</span>
+                <input id="data" type="date">
+            </label>
+
+            <label for="hora">
+                <span>Hora:</span>
+                <input id="hora" type="time">
+            </label>
+
+            <label for="discord_server">
+                <span>Discord:</span>
+                <input id="discord_server" type="text" placeholder="Nome do Server">
+            </label>
+
+            <label for="erro">
+                <span>Erro:</span>
+                <select name="erro" id="erro">
+                    <option value="">Selecione</option>
+                    <option value="reproducao">Reprodução</option>
+                    <option value="playlists">Playlists</option>
+                    <option value="controles">Controles</option>
+                </select>
+            </label>
+
+            <fieldset id="dispositivo">
+                <legend>Dispositivo:</legend>
+                <input id="desk" type="radio" name="dispositivo" value="desktop"> <label for="desk">Desktop</label><br>
+                <input id="smart" type="radio" name="dispositivo" value="smarthphone"> <label for="smart">Smarthphone</label>
+            </fieldset>
+
+            <fieldset id="problemas">
+                <legend>Problemas:</legend>
+                <input id="control" type="checkbox" name="problema" value="controles"> <label for="control">Controles</label><br>
+                <input id="play" type="checkbox" name="problema" value="playlists"> <label for="play">Playlists</label><br>
+                <input id="repro" type="checkbox" name="problema" value="reproducao"> <label for="repro">Reprodução</label><br>
+                <input id="outros" type="checkbox" name="problema" value="outros"> <label for="outros">Outros</label>
+            </fieldset>
+
+            <label for="msg">
+                <span>Mensagem:</span>
+            </label>
+            <textarea name="msg" id="msg" cols="80" rows="4"></textarea>
+
+            <input type="submit" name="btn-enviar" value="ENVIAR">
+            <input type="reset" name="btn-cancelar" value="CANCELAR">
+        </form>
+    </main>
+</body>
+</html>

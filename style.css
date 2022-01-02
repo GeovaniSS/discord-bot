@@ -1,0 +1,185 @@
+@charset "UTF-8"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap');
+
+:root {
+    /*--------CORES---------*/ 
+    --bg-color1: #141518;
+    --bg-color2: #1B1C1F;
+    --title-color1: #8880FE;
+    --title-color2: #8998FA;
+    --menu-color: #6F91FD; 
+    --text-color: #C5C1C1;
+
+    /*--------FONTES--------*/
+    --font: 'Montserrat';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color1);
+    color: var(--text-color);
+}
+
+header > img { 
+    width: 100%;
+    height: 370px;
+}
+
+nav { 
+    min-height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: var(--bg-color2);
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.151)
+}
+
+nav > a {
+    color: var(--menu-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+    color: var(--title-color1);
+}
+
+article { 
+    padding: 30px 20px 50px 20px; 
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--title-color1);
+    margin-bottom: 30px;
+}
+
+h1::after { 
+    content: '♪♪';
+}
+
+p {
+    text-align: justify;
+    font-size: 1.2em;
+    color: var(--text-color);
+    padding: 0px 20px;
+    margin: 15px 0px; 
+    line-height: 30px;
+}
+
+#pag-funcoes {
+    background-color: var(--bg-color2);
+    padding: 30px 20px; 
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.178);
+}
+
+h2 {
+    color: var(--title-color2);
+    font-size: 2em;
+    font-weight: 800;
+    padding: 10px 20px; 
+}
+
+ul {
+    font-size: 1.3em; 
+    margin: 20px;
+    list-style-type: '\♫\00A0\00A0';
+    list-style-position: inside;
+    line-height: 30px;
+}
+
+#pag-beneficios {
+    padding: 30px 20px 50px 20px; 
+}
+
+#pag-beneficios h2 {
+    color: var(--title-color1);
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #2D2E31;
+    margin: 10px; 
+    width: 25%;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.418);
+    transition: 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.418);
+}
+
+.img-beneficios {
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--menu-color);
+    margin: 10px 0px;
+}
+
+.card-content p {
+    margin: 0; 
+    text-align: center;
+    font-size: 1em;
+    line-height: 25px;
+}
+
+#pag-download {
+    background-color: var(--bg-color2);
+    padding: 30px 20px 50px 20px; 
+}
+
+#container-video {
+    display: flex;
+}
+
+#container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-download {
+    margin-right: 20px;
+    background-color: var(--title-color2);
+    font-weight: bold;
+    padding: 8px 20px;
+    color: #fff;
+}
+
+#button-browser {
+    padding: 5px;
+    border: 3px solid var(--title-color2);
+    font-weight: bold;
+    color: #fff;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none; 
+    color: var(--text-color);
+}
