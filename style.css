@@ -107,23 +107,20 @@ ul {
     color: var(--title-color1);
 }
 
-#container {
+.container {
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
 }
 
 .card-container {
+    flex: 1; /*Faz com que os cards ocupem o container com a mesma largura */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Alinha os elementos filhos do card no centro, sem essa propriedade as imagens ficão coladas no flex-start*/
     background-color: #2D2E31;
     margin: 10px; 
-    width: 25%;
     border-radius: 4px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.418);
     transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .card-container:hover {
@@ -132,46 +129,79 @@ ul {
 
 h3 {
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: var(--menu-color);
     margin: 10px 0px;
 }
 
 .card-content p {
     margin: 0; 
-    text-align: center;
-    font-size: 1em;
+    text-align: center; 
+    font-size: 1.1em;
     line-height: 25px;
 }
 
 #pag-download {
     background-color: var(--bg-color2);
-    padding: 30px 20px 50px 20px; 
+    padding: 30px 20px 0 20px; 
+    height: 400px;
 }
 
-#container-video {
-    display: flex;
+#pag-download p {
+    text-align: center;
 }
 
 #container-button {
+    margin-top: 40px;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-#button-download {
-    margin-right: 20px;
-    background-color: var(--title-color2);
-    font-weight: bold;
-    padding: 8px 20px;
-    color: #fff;
+#container-button img {
+    margin-left: 5px;
+    width: 35px;
 }
 
-#button-browser {
-    padding: 5px;
-    border: 3px solid var(--title-color2);
+.button {
+    width: 23%;
+    height: 50px;
+    padding: 8px 20px;
+    border-radius: 28px;
     font-weight: bold;
-    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.button a {
+    margin-left: 10px;
+    font-size: 1.1em;
+    color: #fff; 
+    text-decoration: none;
+}
+
+.download {
+    margin-right: 60px;
+    background-color: var(--title-color2);
+    transition: 0.5s;
+}
+
+.download:hover {
+    background-color: var(--title-color1);
+}
+
+.browser {
+    border: 1px solid var(--title-color2);
+    transition: 0.5s;
+}
+
+.browser:hover {
+    border: 3px solid var(--title-color1);
+}
+
+video {
+    width: 500px;
 }
 
 footer p {
@@ -181,4 +211,8 @@ footer p {
 footer a {
     text-decoration: none; 
     color: var(--text-color);
+}
+
+footer a:hover {
+    color: var(--title-color1);
 }
