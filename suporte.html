@@ -8,14 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style-suporte.css">
 </head>
 <body>
     <header>
-        <img src="img/Banner_DiscordBot2.png" alt="Banner do Site">
+        <img src="img/Banner-DiscordBot.png" alt="Banner do Site">
     </header>
 
-    <nav class="menu">
+    <nav>
         <a href="index.html">HOME</a>
         <a href="index.html#pag-funcoes">FUNÇÕES</a>
         <a href="index.html#pag-beneficios">BENEFÍCIOS</a>
@@ -26,74 +27,89 @@
     <main>
         <h1>Suporte</h1>
         <form action="">
-            <label for="nome">
-                <span>Nome:</span>
-                <input id="nome" type="text" name="nome" placeholder="Nome Completo" autofocus required>
-            </label>
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" name="nome" placeholder="Nome Completo" autofocus required>
 
-            <label for="email">
-                <span>Email:</span>            
-                <input id="email" type="email" name="email" placeholder="nome@gmail.com" required>
-            </label>
+            <label for="email">E-mail:</label>       
+            <input id="email" type="email" name="email" placeholder="nome@gmail.com" required>
 
+            <label for="senha">Senha:</label>
+            <input id="senha" type="password" name="senha" placeholder="somente números" required>
 
-            <label for="senha">
-                <span>Senha:</span>
-                <input id="senha" type="password" name="senha" placeholder="somente números" required>
-            </label>
+            <label for="cel">Celular:</label>
+            <input id="cel" type="tel" name="cel" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$">
 
-            <label for="cel">
-                <span>Celular:</span>
-                <input id="cel" type="tel" name="cel" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$">
-            </label>
+ 
+            <div class="data-hora-server">
+                <div class="input-small">
+                    <label for="data">Data:</label>
+                    <input id="data" type="date">
+                </div>
 
-            <label for="data">
-                <span>Data:</span>
-                <input id="data" type="date">
-            </label>
+                <div class="input-small">
+                    <label for="hora">Hora: </label>
+                    <input id="hora" type="time">
+                </div>
 
-            <label for="hora">
-                <span>Hora:</span>
-                <input id="hora" type="time">
-            </label>
+                <div class="input-small">
+                    <label for="discord_server">Discord:</label>
+                    <input id="discord_server" type="text" placeholder="Server">
+                </div>
+            </div>
 
-            <label for="discord_server">
-                <span>Discord:</span>
-                <input id="discord_server" type="text" placeholder="Nome do Server">
-            </label>
-
-            <label for="erro">
-                <span>Erro:</span>
-                <select name="erro" id="erro">
-                    <option value="">Selecione</option>
-                    <option value="reproducao">Reprodução</option>
-                    <option value="playlists">Playlists</option>
-                    <option value="controles">Controles</option>
-                </select>
-            </label>
+            <label for="erro">Erro:</label>
+            <select name="erro" id="erro">
+                <option value="">Selecione</option>
+                <option value="reproducao">Reprodução</option>
+                <option value="playlists">Playlists</option>
+                <option value="controles">Controles</option>
+            </select>
 
             <fieldset id="dispositivo">
                 <legend>Dispositivo:</legend>
-                <input id="desk" type="radio" name="dispositivo" value="desktop"> <label for="desk">Desktop</label><br>
-                <input id="smart" type="radio" name="dispositivo" value="smarthphone"> <label for="smart">Smarthphone</label>
+                <div class="radio">
+                    <input id="desk" type="radio" name="dispositivo" value="desktop"> 
+                    <label for="desk">Desktop</label>
+                </div>
+                <div class="radio">
+                    <input id="smart" type="radio" name="dispositivo" value="smarthphone"> 
+                    <label for="smart">Smarthphone</label>
+                </div>
             </fieldset>
 
             <fieldset id="problemas">
                 <legend>Problemas:</legend>
-                <input id="control" type="checkbox" name="problema" value="controles"> <label for="control">Controles</label><br>
-                <input id="play" type="checkbox" name="problema" value="playlists"> <label for="play">Playlists</label><br>
-                <input id="repro" type="checkbox" name="problema" value="reproducao"> <label for="repro">Reprodução</label><br>
-                <input id="outros" type="checkbox" name="problema" value="outros"> <label for="outros">Outros</label>
+                <div>
+                    <input id="control" type="checkbox" name="problema" value="controles"> 
+                    <label for="control">Controles</label>
+                </div>
+                <div>
+                    <input id="play" type="checkbox" name="problema" value="playlists"> 
+                    <label for="play">Playlists</label>
+                </div>
+                <div>
+                    <input id="repro" type="checkbox" name="problema" value="reproducao"> 
+                    <label for="repro">Reprodução</label>
+                </div>
+                <div>
+                    <input id="outros" type="checkbox" name="problema" value="outros"> 
+                    <label for="outros">Outros</label>
+                </div>
             </fieldset>
 
-            <label for="msg">
-                <span>Mensagem:</span>
-            </label>
-            <textarea name="msg" id="msg" cols="80" rows="4"></textarea>
 
-            <input type="submit" name="btn-enviar" value="ENVIAR">
-            <input type="reset" name="btn-cancelar" value="CANCELAR">
+            <label for="msg">Mensagem:</label>
+            <textarea name="msg" id="msg"></textarea>
+
+            <div class="button-container">
+                <input type="submit" name="btn-enviar" value="ENVIAR">
+                <input type="reset" name="btn-cancelar" value="CANCELAR">
+            </div>
         </form>
     </main>
+
+    <footer>
+        <p>Desenvolvido por <strong><a href="https://github.com/GeovaniSS" target="_blank">Geovani</a></strong> - 2021</p>
+    </footer>
 </body>
 </html>

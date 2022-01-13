@@ -6,9 +6,10 @@
     /*--------CORES---------*/ 
     --bg-color1: #141518;
     --bg-color2: #1B1C1F;
+    --card-bg-color: #2D2E31;
     --title-color1: #8880FE;
     --title-color2: #8794e5;
-    --menu-color: #6F91FD; 
+    --title-color3: #6F91FD;
     --text-color: #C5C1C1;
 
     /*--------FONTES--------*/
@@ -41,7 +42,7 @@ nav {
 }
 
 nav > a {
-    color: var(--menu-color);
+    color: var(--title-color3);
     font-weight: bold;
     font-size: 1.2em;
     text-decoration: none;
@@ -50,7 +51,7 @@ nav > a {
 
 nav > a:hover {
     text-decoration: underline;
-    color: var(--title-color1);
+    color: var(--title-color2);
 }
 
 article { 
@@ -65,14 +66,9 @@ h1 {
     margin-bottom: 30px;
 }
 
-h1::after { 
-    content: '♪♪';
-}
-
 p {
     text-align: justify;
     font-size: 1.2em;
-    color: var(--text-color);
     padding: 0px 20px;
     margin: 15px 0px; 
     line-height: 30px;
@@ -116,7 +112,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center; /*Alinha os elementos filhos do card no centro, sem essa propriedade as imagens ficão coladas no flex-start*/
-    background-color: #2D2E31;
+    background-color: var(--card-bg-color);
     margin: 10px; 
     border-radius: 4px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.418);
@@ -124,13 +120,13 @@ ul {
 }
 
 .card-container:hover {
-    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.418);
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.733);
 }
 
 h3 {
     text-align: center;
     font-size: 1.4em;
-    color: var(--menu-color);
+    color: var(--title-color3);
     margin: 10px 0px;
 }
 
@@ -216,3 +212,4 @@ footer a {
 footer a:hover {
     color: var(--title-color1);
 }
+
